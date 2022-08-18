@@ -174,6 +174,13 @@ resource "aws_security_group" "mongo_sg" {
     cidr_blocks = ["${var.vpc_cidr_block}"]
   }
 
+    ingress {
+    from_port   = 27017
+    to_port     = 27017
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # because at run time we dont know what is the NLB IP we might need to incorporate getting the ENI address and allow it here.
+  }
+
   ingress {
   from_port   = -1
   to_port     = -1

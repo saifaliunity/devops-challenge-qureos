@@ -1,5 +1,5 @@
 variable "vpc_name" {
-  type = "string"
+
 }
 
 variable "replica_set_name" {
@@ -28,4 +28,12 @@ variable "primary_node_type" {
 
 variable "secondary_node_type" {
 
+}
+
+variable "environment" {
+  default = "production"
+}
+
+variable "region" {
+default = "us-east-1"
 }

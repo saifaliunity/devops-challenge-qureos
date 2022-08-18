@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"bastion","Source":"./bastion","Dir":"bastion"},{"Key":"key_pair","Source":"./key_pair","Dir":"key_pair"},{"Key":"mongodb_cluster","Source":"./mongodb_cluster","Dir":"mongodb_cluster"},{"Key":"vpc","Source":"./vpc","Dir":"vpc"},{"Key":"","Source":"","Dir":"."}]}

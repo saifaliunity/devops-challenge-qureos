@@ -54,7 +54,7 @@ resource "aws_subnet" "public_subnets" {
 resource "aws_subnet" "private_subnets" {
   count             = 3
   vpc_id            = "${aws_vpc.main.id}"
-  availability_zone = "${data.aws_availability_zones.available.names[count.index + 3]}"
+  availability_zone = "${data.aws_availability_zones.available.names[count.index]}"
   cidr_block        = "192.168.${count.index + 4}.0/24"
 
   tags = {

@@ -37,8 +37,8 @@ Description=High-performance, schema-free document-oriented database
 After=network.target
 
 [Service]
-User=mongodb
-ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+User=root
+ExecStart=/usr/binmongod --quiet --config /etc/mongod.conf
 
 [Install]
 WantedBy=multi-user.target
