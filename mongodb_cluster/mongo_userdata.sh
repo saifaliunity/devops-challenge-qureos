@@ -30,7 +30,10 @@ EOL
 
 chown ubuntu:ubuntu /etc/mongod.conf
 
+mkdir -p /data/db
+
 cat >> /etc/systemd/system/mongod.service <<EOL
+
 
 [Unit]
 Description=High-performance, schema-free document-oriented database
@@ -38,7 +41,7 @@ After=network.target
 
 [Service]
 User=root
-ExecStart=/usr/binmongod --quiet --config /etc/mongod.conf
+ExecStart=/usr/bin/mongod --quiet --bind_ip 0.0.0.0
 
 [Install]
 WantedBy=multi-user.target

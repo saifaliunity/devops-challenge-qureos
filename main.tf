@@ -90,7 +90,7 @@ resource "aws_ecs_cluster" "devops-cluster" {
   name = "devops-cluster" # Naming the cluster
   depends_on = [
     module.vpc.main,
-    module.mongo_cluster
+    module.mongodb_cluster
   ]
 }
 
