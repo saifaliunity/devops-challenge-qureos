@@ -89,7 +89,8 @@ resource "aws_lb_listener" "nlb-listener" {
 resource "aws_ecs_cluster" "devops-cluster" {
   name = "devops-cluster" # Naming the cluster
   depends_on = [
-    module.vpc.main
+    module.vpc.main,
+    module.mongo_cluster
   ]
 }
 
