@@ -4,7 +4,9 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+*.pdf
+*.mov
+*.zip
 # Crash log files
 crash.log
 crash.*.log
