@@ -318,6 +318,7 @@ resource "aws_ecs_service" "devops-cluster-backend-service" {
   }
 }
 
+
 resource "aws_appautoscaling_target" "devops-cluster-backend-service_ecs_target" {
   max_capacity       = 10
   min_capacity       = 1
